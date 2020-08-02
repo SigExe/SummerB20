@@ -4,6 +4,7 @@ import com.sun.org.apache.bcel.internal.generic.ARRAYLENGTH;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.function.Predicate;
 
 public class Lambda_Expression {
@@ -40,6 +41,14 @@ public class Lambda_Expression {
 
         names.removeIf(each -> each.startsWith("M") && each.endsWith("y"));
         System.out.println(names);
+
+        System.out.println("===============================");
+
+        ArrayList<Integer> nums = new ArrayList<>();
+        nums.addAll(Arrays.asList(1,1,1,1,2,2,2,2,2,3,3,3,4,5,6,7,8,8,9));
+
+        nums.removeIf(p -> Collections.frequency(nums,p) != 1);
+        System.out.println(nums);
 
     }
 }
