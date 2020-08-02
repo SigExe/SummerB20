@@ -1,0 +1,22 @@
+package day06_ComparisonOperators;
+
+public class Swap2 {
+
+    public static void main(String[] args) {
+        int a = 15;
+        int b = 10;
+
+        a = a + b ; // a = 25 ; b = 15
+        b = a - b ; // b = 15, // a = 25
+        a = a - b ; // a = 15, b = 10
+
+        System.out.println(a);
+        System.out.println(b);
+
+
+
+    }
+
+
+
+}
