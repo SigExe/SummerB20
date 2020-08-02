@@ -42,9 +42,31 @@ public class BulkOperations {
         ArrayList numbers = new ArrayList<>();
         // add: 30, 25, 40, 15, 55, 65, 5, 85, 95, 100
 
-        Integer[] nums = {30, 25, 40, 15, 55, 65, 5, 85, 95, 100};
-        numbers.addAll(Arrays.asList(nums));
+        // Integer[] nums = {30, 25, 40, 15, 55, 65, 5, 85, 95, 100};
+        numbers.addAll(Arrays.asList(30, 25, 40, 15, 55, 65, 5, 85, 95, 100));
         System.out.println(numbers);
+
+        System.out.println("=======================");
+
+        ArrayList<Integer> nums = new ArrayList<>();
+        nums.addAll(Arrays.asList(1,1,1,1,1,2,2,3,4,5,6,7,8,9,10,11,12,13));
+
+        System.out.println(nums);
+
+        nums.removeAll(Arrays.asList(1,2,5,10,11));
+        System.out.println(nums);
+
+        // remove all 1, 2, 5, 10 ,11
+
+        System.out.println("============================");
+
+        ArrayList<Integer> num1 = new ArrayList<>();
+        num1.addAll(Arrays.asList(1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8,9,9));
+
+        // only keep the elements that aer either 1, or 2, or 3, or 9
+
+        num1.retainAll(Arrays.asList(1,2,3,9));
+        System.out.println(num1);
 
     }
 }
