@@ -1,6 +1,7 @@
 package day37_ArrayList;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 
 public class uniques {
@@ -10,10 +11,7 @@ public class uniques {
         String str = "AABBCDDEE";
         String uniques = "";
         ArrayList<String> list = new ArrayList<>();
-
-        for(String each : str.split("")){
-            list.add(each);
-        }
+        list.addAll(Arrays.asList(str.split("")));
 
         System.out.println(list);
 

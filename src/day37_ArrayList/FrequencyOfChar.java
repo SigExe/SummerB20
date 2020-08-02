@@ -3,6 +3,7 @@ package day37_ArrayList;
 import Library.Util;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 
 public class FrequencyOfChar {
@@ -11,10 +12,11 @@ public class FrequencyOfChar {
 
         String str = "AAABBCC";
         ArrayList<String> list = new ArrayList<>();
+        list.addAll(Arrays.asList(str.split("")));
 
-        for(String each : str.split("")){
+        /* for(String each : str.split("")){
             list.add(each);
-        }
+        } */
 
         String nonDup = Util.removeDup(str);
 
