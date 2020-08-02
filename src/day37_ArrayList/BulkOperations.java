@@ -38,5 +38,13 @@ public class BulkOperations {
         boolean r4 = list2.containsAll(Arrays.asList(arr));
         System.out.println(r4);
 
+        System.out.println("========================");
+        ArrayList numbers = new ArrayList<>();
+        // add: 30, 25, 40, 15, 55, 65, 5, 85, 95, 100
+
+        Integer[] nums = {30, 25, 40, 15, 55, 65, 5, 85, 95, 100};
+        numbers.addAll(Arrays.asList(nums));
+        System.out.println(numbers);
+
     }
 }
