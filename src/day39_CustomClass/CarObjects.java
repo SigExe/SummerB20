@@ -41,5 +41,15 @@ public class CarObjects {
         System.out.println(car2.color);
         System.out.println(car2.mileage);
         System.out.println(car2.price);
+
+        Car car3 = new Car();
+
+        car3.setInfo("Honda", "S2000", 2004, "Sky Blue", 74000, 26000);
+
+        Car car4 = new Car();
+
+        car4.setInfo("Bentley", "Continental", 2020, "Brown", 15000, 180000);
+
+
     }
 }
