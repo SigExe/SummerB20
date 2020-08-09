@@ -17,7 +17,7 @@ public class Car {
     double mileage;
     double price;
 
-    public void setInfo(String carBrand, String carModel, int carYear, String carColor,
+    public void setCarInfo(String carBrand, String carModel, int carYear, String carColor,
                        double carMileage, double carPrice){
         brand = carBrand;
         model = carModel;
@@ -26,5 +26,10 @@ public class Car {
         mileage = carMileage;
         price = carPrice;
     }
+
+    public void getCarInfo(){
+        System.out.println(year + " " + brand + " " + model + " " + color + " " + mileage + " " + price);
+    }
+
 
 }
