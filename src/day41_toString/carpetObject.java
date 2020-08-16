@@ -1,4 +1,4 @@
-package day41_Static;
+package day41_toString;
 
 /*
 1. create a custom class for the Carpet class that should contain the following:
@@ -23,34 +23,46 @@ package day41_Static;
 
  */
 
-public class Carpet {
+import java.util.ArrayList;
 
-double width;
-double length;
-double unitPrice;
-boolean isPersian;
+public class carpetObject {
 
-public void customOrder(double width, double length, double unitPrice, boolean isPersian){
-    this.width = width;
-    this.length = length;
-    this.unitPrice = unitPrice;
-    this.isPersian = isPersian;
+    public static void main(String[] args) {
+        Carpet[] carpets = {new Carpet(), new Carpet(), new Carpet(), new Carpet(), new Carpet()};
 
-}
+        carpets[0].customOrder(4.5, 3.5, 7.5, false);
+        carpets[1].customOrder(5.5, 3.5, 8.5, true);
+        carpets[2].customOrder(4.5, 5.5, 9.5, false);
+        carpets[3].customOrder(3.5, 4.5, 10.5, true);
+        carpets[4].customOrder(6.5, 5.5, 11.5, true);
 
-public double calcCost(){
-    double totalPrice = (width * length) * unitPrice;
+       /* for(Carpet each : carpets){
+            each.getCarpetInfo();
+        } */
 
-    return (isPersian)? totalPrice + 200: totalPrice;
-}
+        ArrayList<Carpet> persian = new ArrayList<>();
+        ArrayList<Carpet> regular = new ArrayList<>();
 
-public void getCarpetInfo(){
-    System.out.println("=========================");
-    System.out.println("Width is: " + width);
-    System.out.println("Length is: " + length);
-    System.out.println("Unit Price is: " + unitPrice);
-    System.out.println("Persian Carpet: " + isPersian);
-    System.out.println("The total cost is: " + calcCost());
-}
+       /* for(int i = 0; i <= carpets.length - 1; i++){
+            if(carpets[i].isPersian){
+                persian.add(carpets[i]);
+            } else{
+                regular.add(carpets[i]);
+            }
+        } */
 
+        for(Carpet each : carpets){
+            if(each.isPersian){
+                persian.add(each);
+            } else{
+                regular.add(each);
+            }
+        }
+
+        System.out.println("Number of Persian carpets: " + persian.size());
+        System.out.println("Number of Regular carpets: " + regular.size());
+
+
+
+    }
 }
